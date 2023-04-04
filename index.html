@@ -5,28 +5,32 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
 
-        <link rel="stylesheet" href="index.css">
+        <!-- Font Awesome -->
+        <script src="https://kit.fontawesome.com/7658daa0b2.js" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="css/index.css">
     </head>
     <body>
         <header>
-            <div class="header-info">
-                <h1 class="header-title">Find your film</h1>
-                <h4 class="header-subtitle">My Watchlist</h4>
-            </div>
+            <a class="no-text-decoration" href="index.html"><h1 class="header-title">Find your film</h1></a>
+            <a class="no-text-decoration" href="watchlist.html"><h4 class="header-subtitle">My Watchlist</h4></a>
         </header>
-        <form class="search">
+        <form class="search" id="search" >
             <div class="search-icon-container">
                 <img class="search-icon" src="images/icon-search.png" alt="magnifying glass">
             </div>
-            <input class="search-input" type="search" placeholder="Search for a movie">
+            <input class="search-input" id="search-input" type="search" placeholder="Search for a movie">
             <button class="search-btn">Search</button>
         </form>
         <main>
-            <div>
+            <div class="movies" id="movies">
+                <!-- movies rendered via JS -->
+            </div>
+            <div class="start-exploring" id="start-exploring">
                 <img class="start-exploring-img" src="images/icon-start-exploring.png" alt="film reel">
                 <p class="start-exploring-text">Start exploring</p>
             </div>
         </main>
-        <script src="index.js"></script>
+        <script src="js/index.js"></script>
     </body>
 </html>

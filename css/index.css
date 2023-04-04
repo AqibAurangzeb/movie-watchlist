@@ -1,0 +1,291 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  color: white;
+  background: #121212;
+}
+
+/* typography */
+
+h1 {
+  font-size: 2.625rem;
+  font-weight: 800;
+}
+
+h3 {
+  font-weight: 500;
+}
+
+h4 {
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+p {
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.search-input {
+  font-family: inherit;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.movie-title {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.movie-rating,
+.movie-runtime,
+.movie-categories,
+.movie-watchlist {
+  font-size: 0.75rem;
+}
+
+.fa-circle-plus,
+.fa-circle-minus {
+  font-size: 1rem;
+}
+
+.start-exploring,
+.start-exploring-text {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #2E2E2F;
+}
+
+/* header */
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url('../images/bg-scarface.jpg');
+  background-size: cover;
+  color: white;
+  height: 300px;
+}
+
+.header-title {
+  margin-bottom: 0.3em;
+}
+
+.header-title,
+.header-subtitle {
+  cursor: pointer;
+}
+
+/* navigation */
+
+a { 
+  color: inherit;
+  text-decoration: none;
+}
+
+/* search */
+
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 280px;
+  left: 0;
+  right: 0;
+}
+
+.search-icon-container {
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  top: -7;
+  left: 15;
+}
+
+.search-input {
+  width: 60%;
+  max-width: 500px;
+  height: 38px;
+  border: none;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+  border-radius: 6px 0px 0px 6px;
+  padding-left: 3em;
+  background: #2E2E2F;
+  color: #A5A5A5;
+  outline: none; /* is there a way for outline to include btn? */
+}
+
+.search-btn {
+  width: 120px;
+  height: 38px;
+  border: none;
+  border-radius: 0px 6px 6px 0px;
+  background: #4B4B4B;
+  color: white;
+  cursor: pointer;
+}
+
+/* movies */
+
+.movies {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(430px, 1fr));
+  gap: 1em;
+  margin-top: 0.5em;
+  padding: 2em 2em;
+}
+
+.movie {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 430px;
+  padding: 1em 1.5em;
+  margin: 0 auto; 
+  border-bottom: 1.5px solid #3498db;
+}
+
+.movie:hover {
+  transform: scale(1.05);
+  border: 1px solid #3498db;
+}
+
+.movie-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 0.875em;
+  max-width: 300px;
+}
+
+.movie-info-top {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.movie-info-middle {
+  display: flex;
+  justify-content: space-between;
+}
+
+.movie-info div > * {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.movie-description {
+  color: #A5A5A5;
+}
+
+.movies img {
+  width: 99px;
+  height: 147px;
+  border-radius: 2.4px;
+}
+
+.fa-star {
+  margin-right: 0.25em;
+}
+
+.movie-watchlist,
+i {
+  cursor: pointer;
+}
+
+/* start exploring */
+
+.start-exploring {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 300px;
+}
+
+.start-exploring-img {
+  width: 70px;
+  height: 61.25px;
+}
+
+/* loading */
+
+.loading {
+  margin: 5em auto;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/** Safari **/
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* watchlist page */
+
+.watchlist-start {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 300px;
+}
+
+.watchlist-start-text {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #787878;;
+}
+
+.watchlist-start-add {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+
+/* media queries */
+@media (min-width: 940px) {
+  header {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .header-title {
+    margin: 0em;
+  }
+
+  .movie {
+    border: none;
+  }
+  
+}
+
+/* utility */
+
+.hidden {
+  display: none;
+}

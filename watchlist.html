@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <!-- Inter Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+        <!-- Font Awesome -->
+        <script src="https://kit.fontawesome.com/7658daa0b2.js" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="css/index.css">
+    </head>
+    <body>
+        <header>
+            <a class="no-text-decoration" href="watchlist.html"><h1 class="header-title">My Watchlist</h1></a>
+            <a class="no-text-decoration" href="index.html"><h4 class="header-subtitle">Search for movies</h4></a>
+        </header>
+        <main>
+            <div class="movies" id="watchlisted-movies">
+                <!-- watchlisted movies rendered via JS -->
+            </div>
+            <div class="watchlist-start" id="watchlist-start">
+                <p class="watchlist-start-text">Your watchlist is looking a little empty...</p>
+                <a href="index.html" class="watchlist-start-add"><i class="fa-sharp fa-solid fa-circle-plus"></i>Let's add some movies!</a>
+            </div>
+        </main>
+        <script src="js/watchlist.js"></script>
+    </body>
+</html>
