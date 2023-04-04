@@ -2,7 +2,7 @@ const search = document.getElementById('search')
 const movies = document.getElementById('movies')
 const startExploring = document.getElementById('start-exploring')
 
-const apiKey = OMDB_API_KEY // injected in from env variables
+const apiKey = process.env.OMDB_API_KEY // injected in from env variables
 let searchResults = []
 let watchlist = JSON.parse(localStorage.getItem("watchlist")) ?? []
 
